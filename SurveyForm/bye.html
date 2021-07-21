@@ -1,0 +1,99 @@
+<head>
+  <title>Hello</title>
+  <link rel="stylesheet" href="bye.css">
+</head>
+<body>
+  <div class="main">
+    <header class="header">
+      <h1 id="title">Douzo Restaurant</h1>
+      <p id="description">Please fill in the form below</p>
+    </header>
+  
+    <form id="survey-form">
+      <div class="form">
+        <label id="name-label">Name</label>
+        <input
+          id="name"
+          type="text"
+          placeholder="Enter your full-name"
+          required
+        />
+      </div>
+  
+      <div class="form">
+        <label id="email-label">Email</label>
+        <input
+          id="email"
+          type="email"
+          placeholder="Enter your email address"
+          required
+        />
+      </div>
+  
+      <div class="form">
+        <label id="number-label">How many seat you want (1-8)</label>
+        <input
+          type="number"
+          id="number"
+          placeholder="4"
+          min="1"
+          max="8"
+          required
+        />
+      </div>
+  
+      <div class="form">
+        <label id="dropdown-label">Please select a promotion set </label>
+        <select name="dropdown1" id="dropdown">
+          <option value="1">Basic set (19.99$)</option>
+          <option value="2">Meat Lover set (29.99$)</option>
+          <option value="3">Seafood set (29.99$)</option>
+          <option value="4">Premium set (39.99$)</option>
+        </select>
+      </div>
+  
+      <div class="form">
+        <label id="radio-group-label">Do you want a private room ?</label>
+        <div class="choice radio">
+          <input type="radio" name="radio1" id="radio_1" />
+          <label for="radio_1">Yes (+9.99$)</label>
+          <input type="radio" name="radio1" id="radio_2" checked/>
+          <label for="radio_2">No</label>
+        </div>
+      </div>
+  
+      <div class="form">
+        <label id="checkbox-label">Please select an appetizer (optional)</label>
+        <div class="choice">
+          <div class="choice check">
+            <input type="checkbox" id="choice1" value="checkbox1" />
+            <label for="choice1">French Fries</label>
+          </div>
+          <div class="choice check">
+            <input type="checkbox" id="choice2" value="checkbox1" />
+            <label for="choice2">Baked Potato</label>
+          </div>
+          <div class="choice check">
+            <input type="checkbox" id="choice3" value="checkbox1" />
+            <label for="choice3">Mozzarella Sticks</label>
+          </div>
+          <div class="choice check">
+            <input type="checkbox" id="choice4" value="checkbox1" />
+            <label for="choice4">Cocktail Meatballs</label>
+          </div>
+          <div class="choice check">
+            <input type="checkbox" id="choice5" value="checkbox1" />
+            <label for="choice5">Cream Cheese Fruit Dip.</label>
+          </div>
+        </div>
+      </div>
+  
+      <div class="form">
+        <label for="comment">Additional Comment</label>
+        <textarea id="comment" placeholder="No pork, No vegetable"></textarea>
+      </div>
+  
+      <button type="submit" id="submit"><span>Submit</span></button>
+    </form>
+  </div>
+</body>

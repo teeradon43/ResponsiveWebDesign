@@ -1,0 +1,56 @@
+.horizon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-overflow: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+#navbar {
+  width: 15vw;
+  height: 100%;
+  background-color: red;
+}
+header {
+  font-size: 24px;
+  text-align: center;
+  padding: 1em 0;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  border: none;
+  color: #000000;
+  padding: 20px 0;
+  width: auto;
+  transition: all 0.5s;
+  cursor: pointer;
+  text-align: left;
+  font-size: 28px;
+}
+
+li a {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+li a:before {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+
+li:hover a {
+  padding-left: 25px;
+}
+
+li:hover a:before {
+  opacity: 1;
+  left: 0;
+}
