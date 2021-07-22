@@ -7,37 +7,44 @@
   justify-content: flex-start;
 }
 #navbar {
-  width: 15vw;
+  width: 250px;
   height: 100%;
   background-color: red;
+  position: fixed;
 }
-header {
-  font-size: 24px;
+#contract p {
   text-align: center;
-  padding: 1em 0;
 }
-ul {
+#navbar a {
+  text-decoration: none;
+}
+#navbar h1 {
+  font-size: 30px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#navbar ul {
   list-style-type: none;
 }
-li {
+#navbar li {
   border: none;
   color: #000000;
-  padding: 20px 0;
+  padding: 10px 0;
   width: auto;
   transition: all 0.5s;
   cursor: pointer;
   text-align: left;
-  font-size: 28px;
+  font-size: 20px;
 }
 
-li a {
+#navbar li a.nav-link {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-li a:before {
+#navbar li a.nav-link:before {
   content: "\00bb";
   position: absolute;
   opacity: 0;
@@ -46,11 +53,59 @@ li a:before {
   transition: 0.5s;
 }
 
-li:hover a {
+#navbar li:hover a.nav-link {
   padding-left: 25px;
+  text-overflow: ;
 }
 
-li:hover a:before {
+#navbar li:hover a.nav-link:before {
   opacity: 1;
   left: 0;
+}
+#main-doc {
+  margin-left: 250px;
+  background-color: lightblue;
+  flex-grow: 1;
+}
+.header {
+  margin-left: 3rem;
+}
+.article {
+  margin-left: 4rem;
+}
+
+#main-doc .main-section .header {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+section {
+  margin: 15px 0;
+}
+
+pre {
+  background-color: #222;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 20px;
+}
+code {
+  color: white;
+}
+
+.group_button a {
+  background-color: #8899ff;
+  padding: 10px;
+  border-radius: 10px;
+  color: black;
+  text-decoration: none;
+  border: 1px solid black;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.group_button a:hover {
+  cursor: pointer;
+  background-color: #99aaff;
 }
