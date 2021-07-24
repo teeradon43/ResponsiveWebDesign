@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 #navbar {
   margin: 0;
@@ -16,6 +18,7 @@ body {
   top: 0px;
   left: 0px;
   position: fixed;
+  z-index: 99;
 }
 .horizontal {
   flex-direction: row;
@@ -52,10 +55,145 @@ a .nav_link {
   width: 100%;
   height: 1000px;
   scroll-margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
-#projects {
-  background-color: yellow;
+#welcome-section h1,
+#projects h1 {
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 36px;
+  color: white;
+  filter: drop-shadow(5px 5px black);
+}
+
+@keyframes heartbeat {
+  0% {
+    border-width: 5px;
+  }
+  10% {
+    border-width: 15px;
+  }
+  50% {
+    border-width: 15px;
+  }
+  60% {
+    border-width: 5px;
+  }
+}
+img#portrait {
+  width: 50vw;
+  height: auto;
+  max-width: 300px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  margin-top: 95px;
+  border: 5px white solid;
+  animation-name: heartbeat;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.info p {
+  position: relative;
+  margin-top: 350px;
+  text-align: center;
+}
+ul.info-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  height: 1000px;
+}
+@media (max-width: 800px) {
+  .info p {
+    margin-top: min(55vw, 350px);
+  }
+  ul.info-list {
+    flex-direction: row;
+  }
+}
+.info-list li {
+  margin: 20px 0;
+}
+.info-list a {
+  text-decoration: none;
+  background-color: white;
+  padding: 10px 30px;
+  margin: 10px 5px;
+  border-radius: 10px;
+  border: 0 solid rgb(187, 187, 187);
+  transition: 0.5s;
+  top: 5px;
+  padding-top: 10px;
+  box-shadow: 3px 3px 1px black;
+  font-weight: bold;
+}
+.info-list a:hover {
+  padding-bottom: 8px;
+  border-bottom-width: 8px;
+}
+.info-list li:first-child a {
+  border-color: orange;
+  color: rgb(255, 84, 32);
+}
+.info-list li:last-child a {
+  border-color: rgb(0, 102, 255);
+  color: rgb(0, 102, 255);
+}
+.profile pre {
+  margin: 1.5em;
+  padding: 1.5em;
+  background-color: black;
+  border-radius: 1em;
+  color: white;
+  font-size: 18px;
+  line-height: 2em;
+}
+.profile pre span {
+  color: yellow;
+}
+
+#projects {
+  background-color: rgb(0, 255, 242);
+  width: 100%;
+  height: 100%;
   scroll-margin-top: 70px;
+  padding-bottom: 5em;
+}
+.content-div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 5em;
+}
+.project_photo {
+  width: 640px;
+  height: 480px;
+  object-fit: cover;
+}
+.project_description {
+  margin: 0 4em;
+}
+@media (max-width: 1150px) {
+  .project_photo {
+    width: 60%;
+    min-width: 200px;
+    height: auto;
+  }
+  .profile {
+    width: 80%;
+  }
+  .profile pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
 }
