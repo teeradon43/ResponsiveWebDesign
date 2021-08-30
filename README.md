@@ -10,7 +10,6 @@ You may join this course for free by click [Here](https://www.freecodecamp.org/l
 ---
 
 ## Short Review
-
 Learning :
 - Basic HTML, HTML5 -> Semantic Element เช่น header article section nav etc.
 - CSS (also some example of Pseudo Elements ::before ::after)
